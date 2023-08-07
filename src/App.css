@@ -1,38 +1,226 @@
 .App {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg {
+  width: 100%;
+  height: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bg-overlay {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center -90px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: brightness(50%);
+}
+
+.bg2 {
+  width: 100%;
+  height: 500px;
+}
+
+.bg-overlay2 {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center -300px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: brightness(50%);
+}
+
+.bg3 {
+  width: 100%;
+  height: 500px;
+}
+
+.bg-overlay3 {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center -400px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: brightness(50%);
+}
+
+.scroll__container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
+
+#top {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgb(210, 204, 193);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+#top:hover {
+  color: #dcdcdc;
+}
+
+.kimp {
+  position: absolute;
+  left: 400px;
+}
+
+section {
+  background-image: url('../src/bgimg/mainimg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+section:before {
+  content: '';
+  background: linear-gradient(to top, black, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.section2 {
+  background-image: url('../src/bgimg/mainimg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.section2:before {
+  content: '';
+  background: linear-gradient(to bottom, black, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes slideInFromBottom {
   from {
-    transform: rotate(0deg);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* @keyframes slide {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to{
+    left: 400px;
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from{
+    left: 400px;
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    left: -100px;
+    opacity: 0;
   }
+
+} */
+
+
+.arbot가입 {
+  width: 50%;
+}
+
+@media (max-width:425px) {
+  .arbot가입 {
+    width: 75%;
+  }
+
+  .밸런싱 {
+    width: 35%;
+  }
+
+}
+
+
+@media (max-width:1536px) {
+  .bg-overlay {
+    background-position: center -30px;
+  }
+
+  .bg-overlay2 {
+    background-position: center -200px;
+  }
+
+  .bg-overlay3 {
+    background-position: center -300px;
+  }
+
+}
+
+@media (max-width:1335px) {
+  .bg-overlay {
+    background-position: center 0px;
+  }
+
+  .bg-overlay3 {
+    background-position: center -250px;
+  }
+
+}
+
+@media (max-width: 1250px) {
+  .bg-overlay3 {
+    background-position: center;
+  }
+
+}
+
+@media (max-width:1100px) {
+  .bg-overlay2 {
+    background-position: center -70px;
+  }
+
+}
+
+@media (max-width:770px) {
+  .bg-overlay2 {
+    background-position: center 0px;
+  }
+
 }
